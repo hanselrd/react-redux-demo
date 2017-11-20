@@ -7,8 +7,9 @@ import Posts from './components/Posts';
 
 class App extends Component {
   componentWillMount() {
-    this.props.dispatch(userActions.changeName('React'));
-    this.props.dispatch(userActions.changeAge(99));
+    const { dispatch } = this.props;
+    dispatch(userActions.changeName('React'));
+    dispatch(userActions.changeAge(99));
   }
   render() {
     const { posts, user, dispatch } = this.props;
